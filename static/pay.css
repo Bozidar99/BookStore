@@ -1,0 +1,12 @@
+.container {
+    display: flex; /* Postavljanje kontejnera kao fleksibilnog kontejnera */
+    justify-content: center; /* Centriranje sadržaja po horizontali */
+    align-items: center; /* Centriranje sadržaja po vertikali */
+    height: 100vh; /* Postavljanje visine kontejnera na visinu cijelog ekrana */
+}
+
+.container img {
+    max-width: 50%; /* Postavljanje maksimalne širine slike unutar kontejnera */
+    display: block; /* Postavljanje slike kao blok elementa */
+    margin: 0 auto; /* Automatsko margiranje lijevo i desno kako bi se centrirala slika */
+}

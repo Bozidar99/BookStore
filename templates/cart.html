@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <!-- Uključite dodatne stilove putem vanjske CSS datoteke -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1>Racun</h1>
+        <ol>
+            {% for book in books %}
+                <li>{{ book.title }} {{ book.price }}</li>
+            {% endfor %}
+        </ol>
+        
+        <a href="/" class="btn btn-secondary">Vrati nazad</a>
+
+        <a href="/pay" class="btn btn-secondary">Zavrsi narudzbu</a>
+    </div>
+{% endblock %}

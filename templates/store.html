@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <!-- Uključite dodatne stilove putem vanjske CSS datoteke -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <div class="container mt-5">
+        <h1 class="mb-3"><i class="bi bi-book-half"></i>Spisak knjiga</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Naziv</th>
+                    <th>Cijena</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in books %}
+                    <tr>
+                        <td>{{ book.title }}</td>
+                        <td>{{ book.price }}</td>
+                        <td>
+                            <form action="/cart" method="post">
+                                <input name="id" type="hidden" value="{{book.id}}">
+                                <input type="submit" value="Dodaj na racun">
+                            </form>
+                        </td>
+                    </tr>
+                    
+                {% endfor %}
+            </tbody>
+        </table>
+            
+    </div>
+    
+{% endblock %}

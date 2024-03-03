@@ -1,0 +1,14 @@
+body {
+    background-image: url(/static/1.png);
+    background-size: 50x50; /* Postavljanje pozadinske slike da pokriva cijelu pozadinu */
+    background-repeat: no-repeat; /* Sprječavanje ponavljanja pozadinske slike */
+    background-position: center;
+
+}
+
+.container {
+    position: absolute; /* Postavljanje položaja na apsolutno */
+    top: 41%; /* Postavljanje gornje margine na 50% visine roditeljskog elementa */
+    left: 50%; /* Postavljanje lijeve margine na 50% širine roditeljskog elementa */
+    transform: translate(-50%, -50%) translateX(10%); /* Centriranje elementa i pomjeranje udesno za 50% */
+}

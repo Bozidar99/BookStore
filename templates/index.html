@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <!-- Uključite dodatne stilove putem vanjske CSS datoteke -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <div class="container mt-5">
+
+        <img alt="Logo" src="static/9U6LYj-LogoMakr.png"><br><br><br>
+
+        <a href="/add" class="btn btn-secondary">Dodaj novu knjigu</a>
+
+        <a href="/store" class="btn btn-secondary">Spisak knjiga</a>
+
+    </div>
+
+{% endblock %}

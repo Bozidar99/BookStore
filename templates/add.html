@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <!-- Uključite dodatne stilove putem vanjske CSS datoteke -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <div class="container mt-5">
+
+        <h1 class="mb-3"><i class="bi bi-book"></i>Dodaj novu knjigu</h1>
+
+        <form action="/add" method="post">
+
+            <input autocomplete="off" autofocus name="title" placeholder="Title" type="text">
+            <input autocomplete="off" autofocus name="price" placeholder = "Price" type="number"><br><br>
+            <input type="submit" value="Dodaj novu knjigu">
+            <a href="/" class="btn btn-secondary">Vrati nazad</a> 
+
+        </form>
+
+
+
+    </div>
+
+{% endblock %}
